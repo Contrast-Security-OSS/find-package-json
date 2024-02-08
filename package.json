@@ -1,0 +1,20 @@
+{
+  "name": "@contrast/find-package-json",
+  "version": "1.0.0",
+  "description": "Find the file's package.json, read, and parse it",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node lib/*.test.js"
+  },
+  "keywords": [
+    "package.json",
+    "nodejs",
+    "javascript",
+    "parent"
+  ],
+  "author": "Contrast Security",
+  "license": "MIT"
+}
