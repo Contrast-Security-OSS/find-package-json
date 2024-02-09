@@ -5,7 +5,7 @@ It has been modified so that it is CJS, does not specify an `engine` in the its
 `package.json`, and only looks for `package.json` files.
 
 Starting in the current directory (by default) and continuing up the parent
-directory chain, find `package.json` and return the parsed contents.
+directory chain, find `package.json` and return the absolute path or undefined.
 
 ## Install
 
@@ -13,3 +13,29 @@ directory chain, find `package.json` and return the parsed contents.
 $ npm install @contrast/find-package-json
 ```
 
+
+## Usage
+
+```js
+const { findPackageJsonAsync, findPackageJsonSync } = require('@contrast/find-package-json');
+
+(async () => {
+  console.log(await findPackageJsonAsync());
+  //=> '/Users/contrast/find-package-json/package.json'
+})();
+
+console.log(findPackageJsonSync());
+//=> '/Users/contrast/find-package-json/package.json'
+```
+
+## API
+
+- findPackageJsonAsync([options])
+- findPackageJsonSync([options])
+
+
+### options
+
+Type: `object`
+- `cwd` (string) - Directory to start from. Default: `process.cwd()`
+- `stopAt` (string) - Absolute path to stop at. Default: `path.parse(cwd).root`
