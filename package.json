@@ -1,13 +1,19 @@
 {
   "name": "@contrast/find-package-json",
   "version": "1.0.0",
-  "description": "Find the file's package.json, read, and parse it",
+  "description": "Find the file's package.json",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "lib/index.js"
+  ],
+  "engines": {
+    "node": ">= 14.21.3"
+  },
   "scripts": {
-    "test": "node lib/index.test.js"
+    "test": "mocha lib/index.test.js"
   },
   "keywords": [
     "package.json",
@@ -16,5 +22,8 @@
     "parent"
   ],
   "author": "Contrast Security",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.3.0"
+  }
 }

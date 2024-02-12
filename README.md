@@ -1,7 +1,7 @@
 # @contrast/find-package-json
 
 This is derived from Sindre Sorhus' `find-up-simple` [package](https://www.npmjs.com/package/find-up-simple).
-It has been modified so that it is CJS, does not specify an `engine` in the its
+It has been modified so that it is CJS, lowers `engine` to `>=14.21.3` in
 `package.json`, and only looks for `package.json` files.
 
 Starting in the current directory (by default) and continuing up the parent
