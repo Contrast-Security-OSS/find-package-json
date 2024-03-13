@@ -2,28 +2,28 @@
   "name": "@contrast/find-package-json",
   "version": "1.0.0",
   "description": "Find the file's package.json",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "lib/index.js"
-  ],
-  "engines": {
-    "node": ">= 14.21.3"
-  },
-  "scripts": {
-    "test": "mocha lib/index.test.js"
-  },
+  "author": "Contrast Security <nodejs@contrastsecurity.com> (https://www.contrastsecurity.com)",
+  "license": "MIT",
   "keywords": [
     "package.json",
     "nodejs",
     "javascript",
     "parent"
   ],
-  "author": "Contrast Security",
-  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/index.d.ts",
+    "lib/index.js"
+  ],
+  "engines": {
+    "node": ">= 14.21.3"
+  },
+  "scripts": {
+    "test": "c8 --reporter lcov --reporter text mocha lib"
+  },
   "devDependencies": {
+    "c8": "^9.1.0",
     "mocha": "^10.3.0"
   }
 }
