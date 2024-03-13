@@ -1,6 +1,6 @@
 {
   "name": "@contrast/find-package-json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Find the file's package.json",
   "author": "Contrast Security <nodejs@contrastsecurity.com> (https://www.contrastsecurity.com)",
   "license": "MIT",
